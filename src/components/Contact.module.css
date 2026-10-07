@@ -1,0 +1,60 @@
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+  max-width: 560px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+
+.input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.button {
+  justify-self: start;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  color: var(--muted);
+}
+
+.links a:hover {
+  color: var(--accent);
+}

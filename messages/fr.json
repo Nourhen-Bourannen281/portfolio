@@ -1,0 +1,139 @@
+{
+  "Nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "qa": "QA",
+    "contact": "Contact",
+    "theme": "Changer le mode sombre"
+  },
+  "Hero": {
+    "badge": "Ouverte aux opportunités",
+    "greeting": "Bonjour, je suis",
+    "name": "Nourhen",
+    "fullName": "Nourhen Bourannen",
+    "role": "Développeuse web full-stack",
+    "tagline": "Je crée des applications web modernes avec la stack MERN, et je me tourne désormais vers la data science.",
+    "projectsCta": "Voir mes projets",
+    "contactCta": "Me contacter",
+    "cvCta": "Télécharger mon CV",
+    "statProjects": "Projets",
+    "statLanguages": "Langues",
+    "statStack": "Stack principale"
+  },
+  "About": {
+    "title": "À propos de moi",
+    "text": "Je suis diplômée en informatique de l'ISET Gafsa (Développement des Systèmes d'Information), avec une solide base en développement full-stack avec la stack MERN. J'aime construire des produits complets, de la base de données à l'interface utilisateur, et je renforce aujourd'hui mes compétences avec un master en Data Science. Je travaille aussi comme testeuse QA web freelance : la qualité fait partie de ma façon de développer."
+  },
+  "Skills": {
+    "title": "Compétences",
+    "groups": {
+      "web": "Développement web",
+      "data": "Data & IA",
+      "qa": "Tests & QA"
+    },
+    "learning": "Je construis actuellement des projets data pratiques dans le cadre de mon master en Data Science."
+  },
+  "Languages": {
+    "title": "Langues",
+    "arabic": "Arabe",
+    "french": "Français",
+    "english": "Anglais",
+    "italian": "Italien"
+  },
+  "Experience": {
+    "title": "Expérience",
+    "items": {
+      "qa": {
+        "role": "Testeuse QA web freelance",
+        "company": "Indépendante",
+        "bullets": [
+          "Tests manuels de sites web et d'applications web.",
+          "Test des formulaires, de la connexion/authentification, de la navigation et des principaux parcours utilisateur.",
+          "Identification et documentation de bugs fonctionnels et d'interface.",
+          "Vérification du comportement responsive sur différentes tailles d'écran et navigateurs.",
+          "Vérification des corrections de bugs et tests de non-régression de base.",
+          "Rédaction de rapports de bugs clairs avec étapes de reproduction et résultats attendus."
+        ]
+      },
+      "codealpha": {
+        "role": "Stagiaire en développement web",
+        "company": "CodeAlpha",
+        "bullets": [
+          "Développement de deux applications web avec la stack MERN : un réseau social et une boutique e-commerce.",
+          "Utilisation de Git pour le versionnage des deux projets."
+        ]
+      }
+    }
+  },
+  "Projects": {
+    "title": "Projets",
+    "live": "Démo en ligne",
+    "video": "Vidéo de démo",
+    "code": "Code source",
+    "team": "Projet d'équipe (2 personnes)",
+    "smarttrade": {
+      "title": "SMART-TRADE 360°",
+      "description": "Mon projet de fin d'études (2026), réalisé pour ETAP en équipe de deux. Une plateforme full-stack de gestion commerciale avec une application web MERN, une application mobile, un chatbot IA, un mode sécurité propulsé par l'IA qui détecte les anomalies, et la génération de QR codes et de PDF."
+    },
+    "studygenius": {
+      "title": "StudyGenius",
+      "description": "Un assistant d'étude propulsé par l'IA qui aide les étudiants à apprendre plus vite, développé de bout en bout avec la stack MERN et Google Gemini."
+    },
+    "ecommerce": {
+      "title": "Boutique e-commerce",
+      "description": "Une boutique e-commerce développée avec la stack MERN pendant mon stage chez CodeAlpha."
+    },
+    "social": {
+      "title": "Réseau social",
+      "description": "Une application de réseau social développée avec la stack MERN pendant mon stage chez CodeAlpha."
+    },
+    "restaurant": {
+      "title": "Application de restaurant",
+      "description": "Une application web de restaurant développée avec la stack MERN et déployée en ligne."
+    },
+    "todo": {
+      "title": "Application To-Do",
+      "description": "Une application de gestion de tâches développée avec la stack MERN et déployée en ligne."
+    }
+  },
+  "QA": {
+    "title": "Assurance qualité (QA)",
+    "intro": "Je suis aussi développeuse, donc je teste les applications web sous les deux angles : comment elles sont construites et comment les utilisateurs les vivent.",
+    "areas": [
+      {
+        "title": "Tests fonctionnels",
+        "text": "Formulaires, connexion et authentification, navigation et principaux parcours utilisateur."
+      },
+      {
+        "title": "Tests d'interface et responsive",
+        "text": "Affichage et comportement vérifiés sur différentes tailles d'écran et navigateurs."
+      },
+      {
+        "title": "Rapports de bugs",
+        "text": "Rapports clairs avec étapes de reproduction, résultat obtenu et résultat attendu."
+      },
+      {
+        "title": "Tests de non-régression",
+        "text": "Vérification des corrections, avec des tests de non-régression de base après chaque modification."
+      },
+      {
+        "title": "API et débogage",
+        "text": "Postman pour les requêtes et réponses, Chrome DevTools pour les erreurs de console, de réseau et d'affichage."
+      }
+    ],
+    "toolsTitle": "Outils et méthodes"
+  },
+  "Contact": {
+    "title": "Contactez-moi",
+    "intro": "Une opportunité ou un projet en tête ? Envoyez-moi un message.",
+    "name": "Votre nom",
+    "email": "Votre email",
+    "message": "Votre message",
+    "send": "Envoyer le message"
+  },
+  "Footer": {
+    "rights": "Tous droits réservés."
+  }
+}

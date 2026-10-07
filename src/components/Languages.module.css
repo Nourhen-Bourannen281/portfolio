@@ -1,0 +1,42 @@
+.list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.3rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.name {
+  font-weight: 600;
+}
+
+.stars {
+  display: flex;
+  gap: 0.15rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.on {
+  color: #f5b301;
+}
+
+.off {
+  color: var(--border);
+}

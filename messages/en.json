@@ -1,0 +1,139 @@
+{
+  "Nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "qa": "QA",
+    "contact": "Contact",
+    "theme": "Toggle dark mode"
+  },
+  "Hero": {
+    "badge": "Open to opportunities",
+    "greeting": "Hi, I'm",
+    "name": "Nourhen",
+    "fullName": "Nourhen Bourannen",
+    "role": "Full-stack web developer",
+    "tagline": "I build modern web applications with the MERN stack, and I'm now moving into data science.",
+    "projectsCta": "See my projects",
+    "contactCta": "Contact me",
+    "cvCta": "Download CV",
+    "statProjects": "Projects",
+    "statLanguages": "Languages",
+    "statStack": "Core stack"
+  },
+  "About": {
+    "title": "About me",
+    "text": "I'm a recent Computer Science graduate from ISET Gafsa (Information Systems Development), with a strong foundation in full-stack development using the MERN stack. I enjoy building complete products, from the database to the user interface, and I'm now deepening my skills with a master's degree in Data Science. I also work as a freelance web QA tester, so quality is part of how I build."
+  },
+  "Skills": {
+    "title": "Skills",
+    "groups": {
+      "web": "Web development",
+      "data": "Data & AI",
+      "qa": "Testing & QA"
+    },
+    "learning": "Currently building hands-on data projects as part of my Master's in Data Science."
+  },
+  "Languages": {
+    "title": "Languages",
+    "arabic": "Arabic",
+    "french": "French",
+    "english": "English",
+    "italian": "Italian"
+  },
+  "Experience": {
+    "title": "Experience",
+    "items": {
+      "qa": {
+        "role": "Freelance Web QA Tester",
+        "company": "Independent",
+        "bullets": [
+          "Performed manual testing of websites and web applications.",
+          "Tested forms, login/authentication, navigation, and main user workflows.",
+          "Identified and documented functional and UI bugs.",
+          "Checked responsive behavior on different screen sizes and browsers.",
+          "Verified bug fixes and performed basic regression testing.",
+          "Prepared clear bug reports with reproduction steps and expected results."
+        ]
+      },
+      "codealpha": {
+        "role": "Web Development Intern",
+        "company": "CodeAlpha",
+        "bullets": [
+          "Built two web applications with the MERN stack: a social media app and an e-commerce store.",
+          "Used Git for version control on both projects."
+        ]
+      }
+    }
+  },
+  "Projects": {
+    "title": "Projects",
+    "live": "Live demo",
+    "video": "Demo video",
+    "code": "Source code",
+    "team": "Team project (2 people)",
+    "smarttrade": {
+      "title": "SMART-TRADE 360°",
+      "description": "My end-of-studies project (2026), built for ETAP in a team of two. A full-stack commercial management platform with a MERN web app, a mobile app, an AI chatbot, an AI-powered security mode that detects anomalies, and QR code and PDF generation."
+    },
+    "studygenius": {
+      "title": "StudyGenius",
+      "description": "An AI-powered study assistant that helps students learn faster, built end-to-end with the MERN stack and Google Gemini."
+    },
+    "ecommerce": {
+      "title": "E-commerce Store",
+      "description": "An e-commerce store built with the MERN stack during my CodeAlpha internship."
+    },
+    "social": {
+      "title": "Social Media App",
+      "description": "A social media app built with the MERN stack during my CodeAlpha internship."
+    },
+    "restaurant": {
+      "title": "Restaurant App",
+      "description": "A restaurant web application built with the MERN stack and deployed online."
+    },
+    "todo": {
+      "title": "To-Do App",
+      "description": "A task management app built with the MERN stack and deployed online."
+    }
+  },
+  "QA": {
+    "title": "Quality assurance (QA)",
+    "intro": "I'm also a developer, so I test web applications from both sides: how they are built and how users experience them.",
+    "areas": [
+      {
+        "title": "Functional testing",
+        "text": "Forms, login and authentication, navigation, and the main user workflows."
+      },
+      {
+        "title": "UI & responsive testing",
+        "text": "Layout and behavior checked on different screen sizes and browsers."
+      },
+      {
+        "title": "Bug reporting",
+        "text": "Clear reports with reproduction steps, actual result, and expected result."
+      },
+      {
+        "title": "Regression testing",
+        "text": "Bug fixes verified, with basic regression checks after each change."
+      },
+      {
+        "title": "API & debugging",
+        "text": "Postman for requests and responses, Chrome DevTools for console, network, and layout issues."
+      }
+    ],
+    "toolsTitle": "Tools & methods"
+  },
+  "Contact": {
+    "title": "Get in touch",
+    "intro": "Have an opportunity or a project in mind? Send me a message.",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send message"
+  },
+  "Footer": {
+    "rights": "All rights reserved."
+  }
+}
