@@ -46,7 +46,6 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      dir={locale === "ar" ? "rtl" : "ltr"}
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
