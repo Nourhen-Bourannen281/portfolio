@@ -8,8 +8,9 @@ import CursorEffect from "../../components/CursorEffect";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Nourhen | Portfolio",
-  description: "Full-stack developer portfolio",
+  title: "Nourhen Bourannen | Data Science & Full-Stack Developer",
+  description:
+    "Nourhen Bourannen, Master's student in Data Science at ISSAT Gafsa, Full-Stack Developer interested in AI, Machine Learning, and Web Development.",
 };
 
 const themeScript = `
