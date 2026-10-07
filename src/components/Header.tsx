@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <a href="#top" className={styles.logo}>
-        Nourhen
+        Nourhen Bourannen
       </a>
 
       <nav className={styles.nav}>
