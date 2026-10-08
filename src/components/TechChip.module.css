@@ -1,0 +1,35 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.92rem;
+  white-space: nowrap;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.small {
+  gap: 0.4rem;
+  padding: 0.2rem 0.7rem;
+  background: var(--bg);
+  font-size: 0.8rem;
+}
+
+.icons {
+  display: inline-flex;
+  gap: 0.25rem;
+}
+
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  flex-shrink: 0;
+}

@@ -12,19 +12,17 @@
     "badge": "Ouverte aux opportunités",
     "greeting": "Bonjour, je suis",
     "name": "Nourhen Bourannen",
-    "fullName": "Nourhen Bourannen",
-    "role": "Développeuse web full-stack",
-    "tagline": "Je crée des applications web modernes avec la stack MERN, et je me tourne désormais vers la data science.",
-    "projectsCta": "Voir mes projets",
+    "fullName": "Nourhen Bourannen",    "role": "Développeuse web full-stack & testeuse QA",
+    "tagline": "Je conçois et développe des applications web complètes avec la stack MERN, je les teste avec un œil QA, et je me forme désormais à la data science.",  "projectsCta": "Voir mes projets",
     "contactCta": "Me contacter",
     "cvCta": "Télécharger mon CV",
     "statProjects": "Projets",
     "statLanguages": "Langues",
     "statStack": "Stack principale"
   },
-  "About": {
+    "About": {
     "title": "À propos de moi",
-    "text": "Je suis diplômée en informatique de l'ISET Gafsa (Développement des Systèmes d'Information), avec une solide base en développement full-stack avec la stack MERN. J'aime construire des produits complets, de la base de données à l'interface utilisateur, et je renforce aujourd'hui mes compétences avec un master en Data Science. Je travaille aussi comme testeuse QA web freelance : la qualité fait partie de ma façon de développer."
+    "text": "Je suis développeuse full-stack junior, basée à Gafsa (Tunisie), diplômée en informatique de l'ISET Gafsa (Développement des Systèmes d'Information, 2026, mention Bien). Je construis des applications web de bout en bout avec la stack MERN. Parmi mes projets : une plateforme de gestion commerciale avec IA réalisée pour ETAP en équipe de deux, et un assistant d'étude IA que j'ai déployé en ligne. Je travaille aussi comme testeuse QA web freelance, ce qui m'a appris à vérifier mon propre travail comme le ferait un utilisateur : tester les parcours, documenter clairement les bugs et valider les corrections. Je suis aujourd'hui inscrite en master Data Science, j'apprends Python et le machine learning, et je cherche un poste de développeuse web, sur site ou à distance, pour continuer à progresser au sein d'une équipe."
   },
   "Skills": {
     "title": "Compétences",

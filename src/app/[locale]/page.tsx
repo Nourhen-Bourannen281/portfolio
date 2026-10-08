@@ -8,6 +8,8 @@ import Reveal from "../../components/Reveal";
 import Languages from "../../components/Languages";
 import Experience from "../../components/Experience";
 import QA from "../../components/QA";
+import TechChip from "../../components/TechChip";
+import ProjectCard from "../../components/ProjectCard";
 import { routing } from "../../i18n/routing";
 import { site, skillGroups, projects } from "../../data/site";
 import styles from "./page.module.css";
@@ -84,7 +86,7 @@ export default function Home({
             <div className={styles.glow} />
             <div className={styles.frame}>
               <Image
-                src="/Gemini_Generated_Image_263yk3263yk3263y.jpg"
+                src="/first-removebg-preview.png"
                 width={500}
                 height={500}
                 alt="Portrait of Nourhen"
@@ -116,9 +118,7 @@ export default function Home({
                   </h3>
                   <div className={styles.chips}>
                     {group.items.map((skill) => (
-                      <span key={skill} className={styles.chip}>
-                        {skill}
-                      </span>
+                      <TechChip key={skill} name={skill} />
                     ))}
                   </div>
                   {group.learning && (
@@ -139,67 +139,7 @@ export default function Home({
             <h2 className={styles.sectionTitle}>{tProjects("title")}</h2>
             <div className={styles.grid}>
               {projects.map((project) => (
-                <article key={project.key} className={styles.card}>
-                  <div className={styles.cardHead}>
-                    <h3 className={styles.cardTitle}>
-                      {tProjects(`${project.key}.title`)}
-                    </h3>
-                    {project.year && (
-                      <span className={styles.year}>{project.year}</span>
-                    )}
-                  </div>
-
-                  {project.team && (
-                    <span className={styles.teamBadge}>
-                      {tProjects("team")}
-                    </span>
-                  )}
-
-                  <p className={styles.cardText}>
-                    {tProjects(`${project.key}.description`)}
-                  </p>
-
-                  <div className={styles.stack}>
-                    {project.stack.map((tech) => (
-                      <span key={tech} className={styles.tag}>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className={styles.links}>
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.link}
-                      >
-                        {tProjects("live")}
-                      </a>
-                    )}
-                    {project.video && (
-                      <a
-                        href={project.video}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.link}
-                      >
-                        {tProjects("video")}
-                      </a>
-                    )}
-                    {project.code && (
-                      <a
-                        href={project.code}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.link}
-                      >
-                        {tProjects("code")}
-                      </a>
-                    )}
-                  </div>
-                </article>
+                <ProjectCard key={project.key} project={project} />
               ))}
             </div>
           </Reveal>

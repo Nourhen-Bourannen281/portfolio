@@ -7,12 +7,16 @@ import { routing } from "../../i18n/routing";
 import CursorEffect from "../../components/CursorEffect";
 import "../globals.css";
 
+
 export const metadata: Metadata = {
   title: "Nourhen Bourannen | Data Science & Full-Stack Developer",
   description:
     "Nourhen Bourannen, Master's student in Data Science at ISSAT Gafsa, Full-Stack Developer interested in AI, Machine Learning, and Web Development.",
-};
-
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
+  };
 const themeScript = `
 (function () {
   try {
@@ -47,6 +51,8 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
+      
+      
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >

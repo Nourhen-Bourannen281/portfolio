@@ -12,9 +12,9 @@
     "badge": "Open to opportunities",
     "greeting": "Hi, I'm",
     "name": "Nourhen Bourannen",
-    "fullName": "Nourhen Bourannen",
-    "role": "Full-stack web developer",
-    "tagline": "I build modern web applications with the MERN stack, and I'm now moving into data science.",
+    "fullName": "Nourhen Bourannen",  
+      "role": "Full-stack web developer & QA tester",
+    "tagline": "I design and build complete web applications with the MERN stack, test them with a QA mindset, and I'm now growing into data science.",
     "projectsCta": "See my projects",
     "contactCta": "Contact me",
     "cvCta": "Download CV",
@@ -22,9 +22,9 @@
     "statLanguages": "Languages",
     "statStack": "Core stack"
   },
-  "About": {
+    "About": {
     "title": "About me",
-    "text": "I'm a recent Computer Science graduate from ISET Gafsa (Information Systems Development), with a strong foundation in full-stack development using the MERN stack. I enjoy building complete products, from the database to the user interface, and I'm now deepening my skills with a master's degree in Data Science. I also work as a freelance web QA tester, so quality is part of how I build."
+    "text": "I'm a junior full-stack developer based in Gafsa, Tunisia, with a degree in Computer Science from ISET Gafsa (Information Systems Development, 2026, with honors). I build web applications end to end with the MERN stack. My projects include an AI-powered commercial management platform built for ETAP in a team of two, and an AI study assistant that I deployed online. I also work as a freelance web QA tester, which taught me to check my own work the way a user would: testing workflows, documenting bugs clearly, and verifying fixes. I'm now studying for a master's degree in Data Science, learning Python and machine learning, and I'm looking for a web developer role, on-site or remote, where I can keep growing within a team."
   },
   "Skills": {
     "title": "Skills",

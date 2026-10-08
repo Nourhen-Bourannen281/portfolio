@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { qaTools } from "../data/site";
 import Reveal from "./Reveal";
+import TechChip from "./TechChip";
 import styles from "./QA.module.css";
 
 export default function QA() {
@@ -28,9 +29,7 @@ export default function QA() {
         <h3 className={styles.toolsTitle}>{t("toolsTitle")}</h3>
         <div className={styles.tools}>
           {qaTools.map((tool) => (
-            <span key={tool} className={styles.tool}>
-              {tool}
-            </span>
+            <TechChip key={tool} name={tool} />
           ))}
         </div>
       </Reveal>

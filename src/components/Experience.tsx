@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { experiences } from "../data/site";
 import Reveal from "./Reveal";
+import TechChip from "./TechChip";
 import styles from "./Experience.module.css";
 
 export default function Experience() {
@@ -32,9 +33,7 @@ export default function Experience() {
 
                 <div className={styles.stack}>
                   {exp.stack.map((tech) => (
-                    <span key={tech} className={styles.tag}>
-                      {tech}
-                    </span>
+                    <TechChip key={tech} name={tech} small />
                   ))}
                 </div>
               </article>

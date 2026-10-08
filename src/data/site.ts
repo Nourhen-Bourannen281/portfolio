@@ -17,24 +17,21 @@ export const skillGroups = [
       "React",
       "Next.js",
       "Node.js",
-      "Java",
       "Express",
       "MongoDB",
       "HTML & CSS",
       "Git",
-      "Docker",
-      "PHP",
     ],
   },
   {
     key: "data",
     learning: true,
-    items: ["Python", "Machine Learning","Entrainement des modèles"],
+    items: ["Python", "Machine Learning"],
   },
   {
     key: "qa",
     learning: false,
-    items: ["Manual Testing", "Postman", "Chrome DevTools","Web testing", "Bug Reporting"],
+    items: ["Manual Testing", "Postman", "Chrome DevTools", "Bug Reporting"],
   },
 ];
 
@@ -50,7 +47,7 @@ export const experiences = [
   {
     key: "qa",
     period: "2025 – 2026",
-    stack: ["Postman", "Chrome DevTools", "Manual testing"],
+    stack: ["Postman", "Chrome DevTools", "Manual Testing"],
   },
   {
     key: "codealpha",
@@ -62,18 +59,18 @@ export const experiences = [
 export const qaTools = [
   "Postman",
   "Chrome DevTools",
-  "Manual testing",
-  "Bug reporting",
+  "Manual Testing",
+  "Bug Reporting",
 ];
 
-type Project = {
+export type Project = {
   key: string;
   year?: string;
   team?: boolean;
   stack: string[];
-  code: string; // GitHub link ("" = button hidden)
-  live: string; // deployed site link ("" = button hidden)
-  video: string; // demo video link ("" = button hidden)
+  image: string; // screenshot, e.g. "/projects/smart-trade.png" ("" = placeholder)
+  code: string; // GitHub repo link ("" = your GitHub profile)
+  linkedin: string; // LinkedIn post link ("" = your LinkedIn profile)
 };
 
 export const projects: Project[] = [
@@ -82,47 +79,47 @@ export const projects: Project[] = [
     year: "2026",
     team: true,
     stack: ["React", "Node.js", "Express", "MongoDB", "Mobile app", "AI chatbot"],
+    image: "",
     code: "",
-    live: "",
-    video: "",
+    linkedin: "",
   },
   {
     key: "studygenius",
     stack: ["React", "Node.js", "Express", "MongoDB", "Google Gemini"],
+    image: "",
     code: "",
-    live: "",
-    video: "",
+    linkedin: "",
   },
   {
     key: "ecommerce",
     year: "2024 – 2025",
     stack: ["React", "Node.js", "Express", "MongoDB", "Git"],
+    image: "",
     code: "",
-    live: "",
-    video: "",
+    linkedin: "",
   },
   {
     key: "social",
     year: "2024 – 2025",
     stack: ["React", "Node.js", "Express", "MongoDB", "Git"],
+    image: "",
     code: "",
-    live: "",
-    video: "",
+    linkedin: "",
   },
   {
     key: "restaurant",
     year: "2024 – 2025",
     stack: ["React", "Node.js", "Express", "MongoDB"],
+    image: "",
     code: "",
-    live: "",
-    video: "",
+    linkedin: "",
   },
   {
     key: "todo",
     year: "2024 – 2025",
     stack: ["React", "Node.js", "Express", "MongoDB"],
+    image: "",
     code: "",
-    live: "",
-    video: "",
+    linkedin: "",
   },
 ];
