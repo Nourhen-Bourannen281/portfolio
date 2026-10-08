@@ -8,6 +8,7 @@
     "contact": "Contact",
     "theme": "Changer le mode sombre"
   },
+        "data": "IA & Machine Learning",
   "Hero": {
     "badge": "Ouverte aux opportunités",
     "greeting": "Bonjour, je suis",
@@ -24,12 +25,13 @@
     "title": "À propos de moi",
     "text": "Je suis développeuse full-stack junior, basée à Gafsa (Tunisie), diplômée en informatique de l'ISET Gafsa (Développement des Systèmes d'Information, 2026, mention Bien). Je construis des applications web de bout en bout avec la stack MERN. Parmi mes projets : une plateforme de gestion commerciale avec IA réalisée pour ETAP en équipe de deux, et un assistant d'étude IA que j'ai déployé en ligne. Je travaille aussi comme testeuse QA web freelance, ce qui m'a appris à vérifier mon propre travail comme le ferait un utilisateur : tester les parcours, documenter clairement les bugs et valider les corrections. Je suis aujourd'hui inscrite en master Data Science, j'apprends Python et le machine learning, et je cherche un poste de développeuse web, sur site ou à distance, pour continuer à progresser au sein d'une équipe."
   },
-  "Skills": {
+    "Skills": {
     "title": "Compétences",
     "groups": {
       "web": "Développement web",
-      "data": "Data & IA",
-      "qa": "Tests & QA"
+      "data": "IA & Machine Learning",
+      "qa": "Tests & QA",
+      "tools": "Outils"
     },
     "learning": "Je construis actuellement des projets data pratiques dans le cadre de mon master en Data Science."
   },
@@ -123,13 +125,18 @@
     ],
     "toolsTitle": "Outils et méthodes"
   },
-  "Contact": {
-    "title": "Contactez-moi",
-    "intro": "Une opportunité ou un projet en tête ? Envoyez-moi un message.",
+    "Contact": {
+    "title": "Me contacter",
+    "intro": "Une opportunité ou un projet en tête ? Je serai ravie d'échanger avec vous.",
+    "bubble": "Bonjour ! Parlons de votre projet 👋",
     "name": "Votre nom",
     "email": "Votre email",
     "message": "Votre message",
-    "send": "Envoyer le message"
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "success": "Merci ! Votre message a bien été envoyé. Je vous répondrai bientôt.",
+    "error": "Une erreur est survenue. Réessayez ou écrivez-moi directement par email.",
+    "linksLabel": "Autres moyens de me contacter"
   },
   "Footer": {
     "rights": "Tous droits réservés."

@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <a href="#top" className={styles.logo}>
-        Nourhen Bourannen
+        Nourhen
       </a>
 
       <nav className={styles.nav}>
@@ -17,7 +17,7 @@ export default function Header() {
         <a href="#skills">{t("skills")}</a>
         <a href="#experience">{t("experience")}</a>
         <a href="#projects">{t("projects")}</a>
-        <a href="#qa">{t("qa")}</a>
+        <a href="#contact">{t("contact")}</a>
       </nav>
 
       <div className={styles.actions}>

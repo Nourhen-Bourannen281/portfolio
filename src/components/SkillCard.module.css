@@ -1,0 +1,160 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  height: 100%;
+  padding: 1.6rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  opacity: 0;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Colored bar that draws itself on hover */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), #ff7ab8);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 18px 40px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Entrance: cards slide up one after the other */
+.visible {
+  animation: cardIn 0.7s ease both;
+  animation-delay: var(--d);
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    translate: 0 30px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.iconBox {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), #ff7ab8);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 35%, transparent);
+  color: #fff;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  animation: floatIcon 3.5s ease-in-out infinite;
+}
+
+.card:hover .icon {
+  animation-duration: 1.2s;
+}
+
+@keyframes floatIcon {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -3px;
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+/* ---------- Logos ---------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  opacity: 0;
+}
+
+.visible .chip {
+  animation: chipPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: calc(var(--d) + 350ms + var(--i) * 70ms);
+}
+
+@keyframes chipPop {
+  from {
+    opacity: 0;
+    scale: 0.6;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.note {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .chip {
+    opacity: 1;
+  }
+
+  .visible,
+  .visible .chip,
+  .icon {
+    animation: none;
+  }
+
+  .card,
+  .card::before {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+.text {
+  color: var(--muted);
+  font-size: 0.95rem;
+}

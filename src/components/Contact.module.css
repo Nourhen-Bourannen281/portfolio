@@ -1,60 +1,214 @@
-.title {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+.intro {
+  max-width: 70ch;
+  margin-bottom: 2.5rem;
+  color: var(--muted);
+  font-size: 1.1rem;
 }
 
-.intro {
-  color: var(--muted);
-  margin-bottom: 1.5rem;
+.layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 380px) 1fr;
+  align-items: center;
+  gap: 3rem;
 }
+
+/* ---------- Photo side ---------- */
+
+.visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.glow {
+  position: absolute;
+  top: 5%;
+  inset-inline: 10%;
+  height: 70%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--accent) 0%,
+    #ff7ab8 55%,
+    transparent 75%
+  );
+  filter: blur(55px);
+  opacity: 0.5;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 50% 50% 24px 24px / 36% 36% 24px 24px;
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--accent) 28%, var(--surface)),
+    var(--surface)
+  );
+  box-shadow: 0 20px 50px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Speech bubble */
+.bubble {
+  position: absolute;
+  top: 6%;
+  inset-inline-end: -0.8rem;
+  max-width: 190px;
+  padding: 0.8rem 1.1rem;
+  border-radius: 18px;
+  background: var(--accent);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--accent) 40%, transparent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  animation: bubbleFloat 4s ease-in-out infinite;
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  inset-inline-start: 18px;
+  border-inline: 9px solid transparent;
+  border-top: 10px solid var(--accent);
+}
+
+@keyframes bubbleFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -8px;
+  }
+}
+
+/* Small icon links */
+.links {
+  position: relative;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.links a {
+  display: grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  font-size: 1.15rem;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.links a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ---------- Form ---------- */
 
 .form {
   display: grid;
   gap: 1rem;
-  max-width: 560px;
+  padding: 1.8rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
 }
 
 .input {
   width: 100%;
-  padding: 0.8rem 1rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: var(--surface);
+  background: var(--bg);
   color: var(--text);
   font: inherit;
   resize: vertical;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .input:focus {
-  outline: 2px solid var(--accent);
-  outline-offset: 1px;
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
 }
 
 .button {
   justify-self: start;
-  padding: 0.8rem 1.8rem;
+  padding: 0.85rem 2rem;
   border: none;
   border-radius: 999px;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent), #ff7ab8);
   color: #fff;
   font: inherit;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
 }
 
-.button:hover {
+.button:hover:not(:disabled) {
   transform: translateY(-2px);
 }
 
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  color: var(--muted);
+.button:disabled {
+  opacity: 0.7;
+  cursor: wait;
 }
 
-.links a:hover {
-  color: var(--accent);
+.status,
+.success,
+.error {
+  min-height: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.success {
+  color: #22a55b;
+}
+
+.error {
+  color: #e5484d;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .visual {
+    width: 100%;
+    max-width: 300px;
+    margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble {
+    animation: none;
+  }
 }

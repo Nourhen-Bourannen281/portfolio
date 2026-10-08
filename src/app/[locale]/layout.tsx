@@ -1,33 +1,21 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { routing } from "../../i18n/routing";
 import CursorEffect from "../../components/CursorEffect";
+import ThemeScript from "../../components/ThemeScript";
 import "../globals.css";
 
-
 export const metadata: Metadata = {
-  title: "Nourhen Bourannen | Data Science & Full-Stack Developer",
+  title: "Nourhen Bourannen | Full-Stack Developer",
   description:
-    "Nourhen Bourannen, Master's student in Data Science at ISSAT Gafsa, Full-Stack Developer interested in AI, Machine Learning, and Web Development.",
-  icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    "Portfolio of Nourhen Bourannen, full-stack MERN developer and web QA tester based in Gafsa, Tunisia.",
+    icons: {
+    icon: "/icon.png?v=2",
+    apple: "/icon.png?v=2",
   },
-  };
-const themeScript = `
-(function () {
-  try {
-    var t = localStorage.getItem("theme");
-    if (!t) {
-      t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    }
-    document.documentElement.setAttribute("data-theme", t);
-  } catch (e) {}
-})();
-`;
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -51,15 +39,13 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      
-      
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
+      <head>
+        <ThemeScript />
+      </head>
       <body>
-        <Script id="theme-init" strategy="beforeInteractive">
-          {themeScript}
-        </Script>
         <CursorEffect />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

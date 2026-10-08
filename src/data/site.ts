@@ -5,8 +5,9 @@ export const site = {
   github: "https://github.com/Nourhen-Bourannen281",
   linkedin: "https://www.linkedin.com/in/nourhen-bourannen-568824375/",
   cv: "/Nourhen-Bourannen-CV.pdf",
+  contactImage: "/photo.png", // image next to the form
+  formEndpoint: "", // form service link (see below). "" = opens the mail app
 };
-
 export const skillGroups = [
   {
     key: "web",
@@ -20,7 +21,6 @@ export const skillGroups = [
       "Express",
       "MongoDB",
       "HTML & CSS",
-      "Git",
     ],
   },
   {
@@ -31,7 +31,18 @@ export const skillGroups = [
   {
     key: "qa",
     learning: false,
-    items: ["Manual Testing", "Postman", "Chrome DevTools", "Bug Reporting"],
+    items: [
+      "Manual Testing",
+      "Functional Testing",
+      "Responsive Testing",
+      "Regression Testing",
+      "Bug Reporting",
+    ],
+  },
+  {
+    key: "tools",
+    learning: false,
+    items: ["Git", "GitHub", "Postman", "Chrome DevTools"],
   },
 ];
 

@@ -5,70 +5,27 @@
   font-size: 1.1rem;
 }
 
+/* 3 cards on the first row, 2 wider cards on the second row */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
 }
 
-.card {
-  padding: 1.4rem;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  background: var(--surface);
-  transition: transform 0.25s, border-color 0.25s;
+.grid > :nth-child(-n + 3) {
+  grid-column: span 2;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
+.grid > :nth-child(n + 4) {
+  grid-column: span 3;
 }
 
-.check {
-  display: inline-grid;
-  place-items: center;
-  width: 1.8rem;
-  height: 1.8rem;
-  margin-bottom: 0.8rem;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 700;
-}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
-.cardTitle {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
-}
-
-.cardText {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.toolsTitle {
-  margin-top: 2.5rem;
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-}
-
-.tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.tool {
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface);
-  font-size: 0.95rem;
-  transition: border-color 0.2s, transform 0.2s;
-}
-
-.tool:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
+  .grid > :nth-child(n) {
+    grid-column: auto;
+  }
 }

@@ -26,12 +26,13 @@
     "title": "About me",
     "text": "I'm a junior full-stack developer based in Gafsa, Tunisia, with a degree in Computer Science from ISET Gafsa (Information Systems Development, 2026, with honors). I build web applications end to end with the MERN stack. My projects include an AI-powered commercial management platform built for ETAP in a team of two, and an AI study assistant that I deployed online. I also work as a freelance web QA tester, which taught me to check my own work the way a user would: testing workflows, documenting bugs clearly, and verifying fixes. I'm now studying for a master's degree in Data Science, learning Python and machine learning, and I'm looking for a web developer role, on-site or remote, where I can keep growing within a team."
   },
-  "Skills": {
+    "Skills": {
     "title": "Skills",
     "groups": {
       "web": "Web development",
-      "data": "Data & AI",
-      "qa": "Testing & QA"
+      "data": "AI & Machine Learning",
+      "qa": "Testing & QA",
+      "tools": "Tools"
     },
     "learning": "Currently building hands-on data projects as part of my Master's in Data Science."
   },
@@ -42,6 +43,7 @@
     "english": "English",
     "italian": "Italian"
   },
+        "data": "AI & Machine Learning",
   "Experience": {
     "title": "Experience",
     "items": {
@@ -125,13 +127,18 @@
     ],
     "toolsTitle": "Tools & methods"
   },
-  "Contact": {
-    "title": "Get in touch",
-    "intro": "Have an opportunity or a project in mind? Send me a message.",
+    "Contact": {
+    "title": "Contact me",
+    "intro": "Have an opportunity or a project in mind? I'd be glad to hear from you.",
+    "bubble": "Hi! Let's talk about your project 👋",
     "name": "Your name",
     "email": "Your email",
     "message": "Your message",
-    "send": "Send message"
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Thank you! Your message has been sent. I'll get back to you soon.",
+    "error": "Something went wrong. Please try again or email me directly.",
+    "linksLabel": "Other ways to reach me"
   },
   "Footer": {
     "rights": "All rights reserved."

@@ -7,9 +7,9 @@ import Header from "../../components/Header";
 import Reveal from "../../components/Reveal";
 import Languages from "../../components/Languages";
 import Experience from "../../components/Experience";
-import QA from "../../components/QA";
-import TechChip from "../../components/TechChip";
+import SkillCard from "../../components/SkillCard";
 import ProjectCard from "../../components/ProjectCard";
+import Contact from "../../components/Contact";
 import { routing } from "../../i18n/routing";
 import { site, skillGroups, projects } from "../../data/site";
 import styles from "./page.module.css";
@@ -64,6 +64,9 @@ export default function Home({
               >
                 {tHero("cvCta")}
               </a>
+              <a href="#contact" className={styles.secondary}>
+                {tHero("contactCta")}
+              </a>
             </div>
 
             <div className={styles.stats}>
@@ -86,7 +89,7 @@ export default function Home({
             <div className={styles.glow} />
             <div className={styles.frame}>
               <Image
-                src="/first-removebg-preview.png"
+                src="/image.png"
                 width={500}
                 height={500}
                 alt="Portrait of Nourhen"
@@ -102,32 +105,45 @@ export default function Home({
 
         <section id="about" className="container">
           <Reveal>
-            <h2 className={styles.sectionTitle}>{tAbout("title")}</h2>
-            <p className={styles.text}>{tAbout("text")}</p>
+            <div className={styles.about}>
+              <div className={styles.aboutPhoto}>
+                <div className={styles.aboutGlow} />
+                <div className={styles.aboutFrame}>
+                  <Image
+                    src="/first-removebg-preview.png"
+                    width={392}
+                    height={480}
+                    alt="Portrait of Nourhen"
+                    className={styles.aboutImg}
+                  />
+                </div>
+              </div>
+
+              <div className={styles.aboutText}>
+                <h2 className={styles.sectionTitle}>{tAbout("title")}</h2>
+                <p className={styles.text}>{tAbout("text")}</p>
+              </div>
+            </div>
           </Reveal>
         </section>
 
         <section id="skills" className="container">
           <Reveal>
             <h2 className={styles.sectionTitle}>{tSkills("title")}</h2>
-            <div className={styles.groups}>
-              {skillGroups.map((group) => (
-                <div key={group.key} className={styles.group}>
-                  <h3 className={styles.groupTitle}>
-                    {tSkills(`groups.${group.key}`)}
-                  </h3>
-                  <div className={styles.chips}>
-                    {group.items.map((skill) => (
-                      <TechChip key={skill} name={skill} />
-                    ))}
-                  </div>
-                  {group.learning && (
-                    <p className={styles.note}>{tSkills("learning")}</p>
-                  )}
-                </div>
-              ))}
-            </div>
           </Reveal>
+
+          <div className={styles.skillsGrid}>
+            {skillGroups.map((group, i) => (
+              <SkillCard
+                key={group.key}
+                index={i % 2}
+                icon={group.key}
+                title={tSkills(`groups.${group.key}`)}
+                items={group.items}
+                note={group.learning ? tSkills("learning") : undefined}
+              />
+            ))}
+          </div>
         </section>
 
         <Languages />
@@ -145,7 +161,7 @@ export default function Home({
           </Reveal>
         </section>
 
-        <QA />
+        <Contact />
       </main>
 
       <footer className={styles.footer}>
