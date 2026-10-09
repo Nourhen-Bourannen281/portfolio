@@ -6,8 +6,9 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/nourhen-bourannen-568824375/",
   cv: "/Nourhen-Bourannen-CV.pdf",
   contactImage: "/photo.png", // image next to the form
-  formEndpoint: "", // form service link (see below). "" = opens the mail app
+  formEndpoint: "", // form service link. "" = opens the mail app
 };
+
 export const skillGroups = [
   {
     key: "web",
@@ -80,8 +81,9 @@ export type Project = {
   team?: boolean;
   stack: string[];
   image: string; // screenshot, e.g. "/projects/smart-trade.png" ("" = placeholder)
-  code: string; // GitHub repo link ("" = your GitHub profile)
-  linkedin: string; // LinkedIn post link ("" = your LinkedIn profile)
+  live: string; // the project's own website ("" = no button)
+  linkedin: string; // the LinkedIn post about this project ("" = no button)
+  code: string; // this project's own GitHub repository ("" = no button)
 };
 
 export const projects: Project[] = [
@@ -91,46 +93,52 @@ export const projects: Project[] = [
     team: true,
     stack: ["React", "Node.js", "Express", "MongoDB", "Mobile app", "AI chatbot"],
     image: "",
-    code: "",
-    linkedin: "",
+    live: "",
+    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7483200321037672449/",
+    code: "https://github.com/Nourhen-Bourannen281/ETAP-GAS",
   },
   {
     key: "studygenius",
     stack: ["React", "Node.js", "Express", "MongoDB", "Google Gemini"],
     image: "",
-    code: "",
+    live: "https://study-genius-sand.vercel.app/login",
     linkedin: "",
+    code: "https://github.com/Nourhen-Bourannen281/StudyGenius",
   },
   {
     key: "ecommerce",
     year: "2024 – 2025",
     stack: ["React", "Node.js", "Express", "MongoDB", "Git"],
     image: "",
-    code: "",
-    linkedin: "",
+    live: "",
+    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7365821258279641089/",
+    code: "https://github.com/Nourhen-Bourannen281/CodeAlpha_UrStore",
   },
   {
     key: "social",
     year: "2024 – 2025",
     stack: ["React", "Node.js", "Express", "MongoDB", "Git"],
     image: "",
-    code: "",
-    linkedin: "",
+    live: "",
+    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7365823626731835395/",
+    code: "https://github.com/Nourhen-Bourannen281/CodeAlpha_WeConnecte-v2",
   },
   {
     key: "restaurant",
     year: "2024 – 2025",
     stack: ["React", "Node.js", "Express", "MongoDB"],
     image: "",
-    code: "",
+    live: "https://lunaya-restaurant-frontend.onrender.com/",
     linkedin: "",
+    code: "https://github.com/Nourhen-Bourannen281/lunaya-restaurant-site",
   },
   {
     key: "todo",
     year: "2024 – 2025",
     stack: ["React", "Node.js", "Express", "MongoDB"],
     image: "",
-    code: "",
+    live: "https://todo-frontend-44u5.onrender.com/",
     linkedin: "",
+    code: "https://github.com/Nourhen-Bourannen281/TODO_App",
   },
 ];

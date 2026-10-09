@@ -1,40 +1,48 @@
 import Image from "next/image";
+import type { IconType } from "react-icons";
 import { useTranslations } from "next-intl";
+import { LuGlobe } from "react-icons/lu";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { site, type Project } from "../data/site";
+import type { Project } from "../data/site";
 import TechChip from "./TechChip";
 import styles from "./ProjectCard.module.css";
+
+type ProjectLink = { href: string; label: string; Icon: IconType };
 
 export default function ProjectCard({ project }: { project: Project }) {
   const t = useTranslations("Projects");
 
   const title = t(`${project.key}.title`);
   const description = t(`${project.key}.description`);
-  const codeUrl = project.code || site.github;
-  const linkedinUrl = project.linkedin || site.linkedin;
 
-  const actions = (
-    <div className={styles.actions}>
-      <a
-        href={codeUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${styles.btn} ${styles.btnLight}`}
-      >
-        <FaGithub aria-hidden="true" />
-        {t("code")}
-      </a>
-      <a
-        href={linkedinUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${styles.btn} ${styles.btnOutline}`}
-      >
-        <FaLinkedin aria-hidden="true" />
-        LinkedIn
-      </a>
-    </div>
-  );
+  // Only the links that really exist for this project
+  const links = [
+    project.live && { href: project.live, label: t("live"), Icon: LuGlobe },
+    project.code && { href: project.code, label: t("code"), Icon: FaGithub },
+    project.linkedin && {
+      href: project.linkedin,
+      label: "LinkedIn",
+      Icon: FaLinkedin,
+    },
+  ].filter(Boolean) as ProjectLink[];
+
+  const actions =
+    links.length > 0 ? (
+      <div className={styles.actions}>
+        {links.map(({ href, label, Icon }, i) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.btn} ${i === 0 ? styles.btnLight : styles.btnOutline}`}
+          >
+            <Icon aria-hidden="true" />
+            {label}
+          </a>
+        ))}
+      </div>
+    ) : null;
 
   return (
     <article className={styles.card}>
